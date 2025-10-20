@@ -119,3 +119,31 @@ print(f"Se pueden organizar de {maneras} maneras diferentes")
 manerasB = factorial(industrial) * factorial(9)
 
 print(f"Se pueden organizar de {manerasB} maneras diferentes")
+
+#TERCER PUNTO
+print("TERCER PUNTO")
+
+#Total de 5 ingenieros y 7 abogados forman un comite donde se seleccionan 2 ingenieros y 3 abogados de cuantas formas es posible organizarse si
+print("Total de 5 ingenieros y 7 abogados forman un comite donde se seleccionan 2 ingenieros y 3 abogados de cuantas formas es posible organizarse si")
+#Datos
+ingenieros = 5
+abogados = 7
+
+#A. Se escogen 2 ingenieros y 3 abogados
+formas_A = math.comb(ingenieros, 2) * math.comb(abogados, 3)
+
+#B. Se escogen 2 ingenieros y 2 abogados pero se despide 1 abogado
+formas_B = math.comb(ingenieros, 2) * math.comb(abogados, 2) * math.comb(2, 1)
+
+#C. Se escogen 2 ingenieros pero se despiden 2 y 3 abogados
+formas_C = math.comb(ingenieros, 2) * math.comb(abogados, 3) * math.comb(2, 2)
+
+#Resultados
+print("A. Formas (2 ingenieros, 3 abogados):", formas_A)
+print("B. Formas (2 ingenieros, 2 abogados y despiden 1 abogado):", formas_B)
+print("C. Formas (2 ingenieros y despiden 2, 3 abogados):", formas_C)
+
+#CUARTO PUNTO
+print("CUARTO PUNTO")
+
+#Se ordenan en fila 5 estudiantes de electronica, 2 de sistemas y 3 de industrial. De cuantas formas es posible ordenarlos, si los estudiantes de la misma carrera no se distinguen entre si? permutaciones con repetidos.

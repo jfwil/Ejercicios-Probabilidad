@@ -147,3 +147,49 @@ print("C. Formas (2 ingenieros y despiden 2, 3 abogados):", formas_C)
 print("CUARTO PUNTO")
 
 #Se ordenan en fila 5 estudiantes de electronica, 2 de sistemas y 3 de industrial. De cuantas formas es posible ordenarlos, si los estudiantes de la misma carrera no se distinguen entre si? permutaciones con repetidos.
+
+#Datos
+electronica = 5
+sistemas = 2
+industrial = 3
+total = electronica + sistemas + industrial
+
+#Permutaciones con repetidos
+formas = math.factorial(total) / (math.factorial(electronica) * math.factorial(sistemas) * math.factorial(industrial))
+
+#Resultado
+print("Número de formas posibles de ordenarse:", int(formas))
+
+#QUINTO PUNTO
+print("QUINTO PUNTO")
+
+#Determina la probabilidad de: A. No obtener un total de 7 u 11 en ninguno de los dos lanzamientos de un par de dados. B. Obtener tres veces el numero 6 en 5 lanzamientos de un dado
+
+#A. No obtener 7 u 11 en ninguno de los dos lanzamientos
+p_no_7_11 = (28/36) ** 2
+
+#B. Obtener tres veces el número 6 en 5 lanzamientos
+n = 5   #de lanzamientos
+k = 3   #de veces que sale 6
+p = 1/6 #de probabilidad de éxito
+prob_3_de_5 = math.comb(n, k) * (p ** k) * ((1 - p) ** (n - k))
+
+#Resultados
+print("A. Probabilidad de NO obtener 7 u 11 en dos lanzamientos:", p_no_7_11)
+print("B. Probabilidad de obtener tres veces el número 6 en 5 lanzamientos:", prob_3_de_5)
+
+#SEXTO PUNTO
+print("SEXTO PUNTO")
+
+#Una maquina produce un total de 12 mil memorias diarias, de las cuales en promedio el 3% son defectuosas. Determina la probabilidad de que de 600 memorias seleccionadas aleatoriamente 12 sean defectuosas
+
+#Datos
+n = 600   #de memorias seleccionadas
+k = 12    #de defectuosas
+p = 0.03  #de probabilidad de defecto
+
+#Distribución binomil
+probabilidad = math.comb(n, k) * (p ** k) * ((1 - p) ** (n - k))
+
+#Resultado
+print("Probabilidad de que 12 sean defectuosas:", probabilidad)
